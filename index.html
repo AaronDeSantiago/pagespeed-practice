@@ -5,22 +5,24 @@
 <meta http-equiv="Cache-control" content="private, max-age=600">
 <title>PageSpeed Practice</title>
 
+<script type="text/javascript">
+        $(document).ready(function(){
+        if($("body").size()>0){
+                if (document.createStyleSheet){
+                    document.createStyleSheet('side-menu.css');
+                }
+                else {
+                    $("head").append($("<link rel='stylesheet' 
+                    href='style.css' 
+                    type='text/css' media='screen' />"));
+                }
+            }
+        });
+    </script>
+<script async src="ui.js"></script>
+<script async src="moment.js"></script>  
 </head>
 <body>
-    
-<header>
-    <script>
-var cb = function() {
-var l = document.createElement('link'); l.rel = 'stylesheet';
-l.href = '';
-var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-};
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(cb);
-else window.addEventListener('load', cb);
-</script>
-</header>
 
 <div id="layout">
     <!-- Menu toggle -->
@@ -88,8 +90,5 @@ else window.addEventListener('load', cb);
         </div>
     </div>
 </div>
-
-<script async src="ui.js"></script>
-<script async src="moment.js"></script>  
 </body>
 </html>
