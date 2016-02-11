@@ -5,7 +5,11 @@
 <meta http-equiv="Cache-control" content="private, max-age=600">
 <title>PageSpeed Practice</title>
 
-<script>
+</head>
+<body>
+    
+<header>
+    <script>
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
 l.href = 'side-menu.css';
@@ -16,9 +20,8 @@ webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(cb);
 else window.addEventListener('load', cb);
 </script>
+</header>
 
-</head>
-<body>
 <div id="layout">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
