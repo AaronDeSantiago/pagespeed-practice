@@ -4,6 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-control" content="private, max-age=600">
 <title>PageSpeed Practice</title>
+
+<script>
+var cb = function() {
+var l = document.createElement('link'); l.rel = 'stylesheet';
+l.href = 'side-menu.css';
+var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb);
+else window.addEventListener('load', cb);
+</script>
+
 </head>
 <body>
 <div id="layout">
@@ -72,7 +85,7 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="side-menu.css">
+
 <script async src="ui.js"></script>
 <script async src="moment.js"></script>  
 </body>
