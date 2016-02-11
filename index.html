@@ -5,20 +5,6 @@
 <meta http-equiv="Cache-control" content="private, max-age=600">
 <title>PageSpeed Practice</title>
 
-<script type="text/javascript">
-        $(document).ready(function(){
-        if($("body").size()>0){
-                if (document.createStyleSheet){
-                    document.createStyleSheet('side-menu.css');
-                }
-                else {
-                    $("head").append($("<link rel='stylesheet' 
-                    href='side-menu.css' 
-                    type='text/css' media='screen' />"));
-                }
-            }
-        });
-    </script>
 <script async src="ui.js"></script>
 <script async src="moment.js"></script>  
 </head>
@@ -92,3 +78,5 @@
 </div>
 </body>
 </html>
+
+<link rel="stylesheet" href="side-menu.css”>
